@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title><%= title %></title>
+  <link rel="stylesheet" href="/stylesheets/bootstrap.min.css">
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body class="text-center">
+
+  <form class="form-signin" action="/" method="POST">
+
+    <% if(msg.length != '' ) { %>
+    <div class="alert <%= msgclass %> alert-dismissible fade show" role="alert">
+      <%= msg %>
+      <button type="button" class="close" data-dismiss="alert">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <% } %>
+
+    <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+
+    <label class="sr-only">Email address</label>
+    <input type="email" class="form-control" placeholder="Email address" name="email" required autofocus>
+
+    <label for="inputPassword" class="sr-only">Password</label>
+    <input type="password" class="form-control" placeholder="Password" name="pass" required>
+
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+
+    <div class="checkbox mb-3">
+      <a class="nav-link" href="/signup">Register a new account</a>
+    </div>
+
+    <p class="mt-5 mb-3 text-muted">&copy; 2020 NodeJS App created by Pawan</p>
+  </form>
+
+</body>
+
+<script src="/javascripts/jquery.min.js"></script>
+<script src="/javascripts/bootstrap.min.js"></script>
+
+</html>
